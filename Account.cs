@@ -6,7 +6,7 @@ namespace Demka
 {
     public class Account
     {
-
+        #region Private Member
         private string Number { get; set; } // для хранения номера телефона
 
         public string Token { get; set; } // для токена
@@ -19,7 +19,7 @@ namespace Demka
         // хоба, коллекция <ключ, значение> для хранения неопределенного количества кошельков и их суммы
         private Dictionary<int, float> Wallet { get; set; } = new Dictionary<int, float>();
 
-
+        #endregion
 
         public Account(string token) // при создании обьекта обязан добавить токен, иначе ЭКСЕПШН!!
         {
