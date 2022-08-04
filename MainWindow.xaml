@@ -10,6 +10,8 @@
 		WindowStartupLocation="CenterScreen"
 		AllowsTransparency="True"
 		Title="MainWindow" Height="450" Width="800">
+    
+    
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
             <Setter Property="Template">
@@ -23,7 +25,7 @@
                             <Grid>
                                 <!-- Window border and shadow -->
                                 <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=6}"
-										Background="{Binding BackgroundLightBrush, FallbackValue=White}">
+										Background="{StaticResource BackgroundLightBrush}">
                                     <Border.Effect>
                                         <DropShadowEffect ShadowDepth="0" Opacity="0.2"/>
                                     </Border.Effect>
@@ -52,8 +54,8 @@
                                         </Grid.ColumnDefinitions>
 
                                         <!-- Icon -->
-                                        <Button>
-                                            <Image Source="C:\Users\semae\source\repos\Demka\Images\QiwiIcon.png"/>
+                                        <Button  Width="100" Height="100">
+                                            <Image Source="/Images/QiwiIcon.png" />
                                         </Button>
                                     </Grid>
                                 </Grid>
